@@ -1,132 +1,139 @@
 <!DOCTYPE html> <html lang="en">
-	<title>Stuart Weenig</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
-		html,body,h1,h2,h3,h4,h5,h6 {
-			font-family: "Roboto", sans-serif
-		}
-	</style>
-	<script>
-		function initialize(){
-			var e = 0;
-			var c = 0;
-			var parenturl=parent.document.location.search; //get the parent page URL parameters
-			parenturl=parenturl.replace('?',''); //remove the leading ? from the URL parameters
-			var argsarray=parenturl.split('&'); //split the parameters into an array of parameter pairs
-			var argsmatrix = new Array(argsarray.length); //create the matrix to hold the parameters after splitting
-			for (var i = 0; i < argsarray.length; i++){argsmatrix[i] = new Array(2);argsmatrix[i] = argsarray[i].split('=');} //split the array members and put into the matrix
-			for (var j = 0; j < argsmatrix.length; j++){
-				if (argsmatrix[j][0] == 'e'){
-					document.getElementById('email').innerHTML = argsmatrix[j][1];
-					document.getElementById('email').href='mailto:' + argsmatrix[j][1];
-				}
-				if (argsmatrix[j][0] == 'c'){document.getElementById('cell').innerHTML = argsmatrix[j][1];}
-			}
-		}
-	</script> <body class="w3-light-grey" onload="initialize();">
-	<div class="w3-content w3-margin-top" style="max-width:1400px;">
-		<div class="w3-row-padding">
-			<div class="w3-third">
-				<div class="w3-white w3-text-grey w3-card-4">
-					<div class="w3-display-container">
-						<img src="images/profile.jpg" style="width:100%" alt="Avatar">
-						<div class="w3-display-bottomleft w3-container w3-text-black w3-gray" style="border-radius:0 16px 0 0;"><h2>Stuart Weenig</h2></div>
-					</div>
-					<div class="w3-container">
-						<p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Network Management Tools Architect/Designer</p>
-						<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Houston, TX</p>
-						<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a id="email" href=""></a></p>
-						<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><span id="cell"></span></p>
-						<p><a href="http://stuart.weenig.com"><i class="fa fa-link fa-fw w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i>stuart.weenig.com</a></p>
-						<p><a href="http://twitter.com/sweenig"><i class="fa fa-fw fa-twitter w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i><i class="fa fa-at"></i>sweenig</a></p>
-						<p><a href="http://www.linkedin.com/in/sweenig"><i class="fa fa-fw fa-linkedin w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i>linkedin.com/in/sweenig</a></p>
-						<p><a href="sweenig.resume.current.pdf"><i class="fa fa-fw fa-download w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i>Download PDF</a></p>
-						<hr>
-						<p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-						<ul class="w3-ul">
-							<li class="li-bar"><i class="fa fa-area-chart w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Network Monitoring</span></li>
-							<li class="li-bar"><i class="fa fa-laptop w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Software Defined Networking</span></li>
-							<li class="li-bar"><i class="fa fa-code-fork w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Software Development</span></li>
-							<li class="li-bar"><i class="fa fa-cloud w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Cloud Computing</span></li>
-							<li class="li-bar"><i class="fa fa-building-o w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Enterprise</span></li>
-							<li class="li-bar"><i class="fa fa-windows w3-bar-item"></i><span class="w3-margin-left w3-bar-item">SharePoint/Office 365</span></li>
-							<li class="li-bar"><i class="fa fa-code w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Python, Perl, HTML5, JavaScript, CSS3</span></li>
-						</ul>
-						<br>
-						<p class="w3-large w3-text-theme">
-							<b>
-								<i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages
-							</b>
-						</p>
-						<ul class="w3-ul">
-							<li class="li-bar">
-								<i class="fa fa-comments-o w3-bar-item"></i><span class="w3-margin-left w3-bar-item">English</span>
-							</li>
-							<li class="li-bar">
-								<i class="fa fa-comments-o w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Spanish</span>
-							</li>
-						</ul>
-						<br>
-					</div>
-				</div><br>
-			</div>
-		<div class="w3-twothird">
-			<div class="w3-container w3-card w3-white w3-margin-bottom">
-				<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-				<div class="w3-container">
-					<h5 class="w3-opacity"><b>Network Management System Analyst / Chevron</b></h5>
-					<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2014 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-					<p>Enterprise Tools Portfolio Management responsibilities including deduplication, renovation, modernization, and rationalization of tools currently in use globally.</p>
-					<p>Identified and prepared for long term growth of network operations monitoring pipeline to include server, cloud, storage, database, and application monitoring.</p>
-					<p>As SharePoint Team Site administrator, identified growth opportunities and filled gaps using out of the box technologies, maximizing utilization and convenience.</p>
-					<p>Proactively identify network infrastructure issues by providing regular, clear, reliable communication to stake holders about service impacting issues.</p>
-					<p>Organized and carried out PiWars coding principles education initiative, utilizing low budget robotics and physical computing devices.</p>
-					<hr>
-				</div>
-				<div class="w3-container">
-					<h5 class="w3-opacity"><b>Communications Officer / CA|NetQoS Global User Community</b></h5>
-					<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2010 - Jan 2015</h6>
-					<p>Ensured that the community was aligned with the other communities. Maintained the communities' calendar in coordination with regional and global events. Reviewed and edited content prior to site publication. Reviewed and 
+  <head>
+    <title>Stuart Weenig</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {
+        font-family: "Roboto", sans-serif
+      }
+    </style>
+    <script>
+      function initialize(){
+        var e = 0;
+        var c = 0;
+        var parenturl=parent.document.location.search; //get the parent page URL parameters
+        parenturl=parenturl.replace('?',''); //remove the leading ? from the URL parameters
+        var argsarray=parenturl.split('&'); //split the parameters into an array of parameter pairs
+        var argsmatrix = new Array(argsarray.length); //create the matrix to hold the parameters after splitting
+        for (var i = 0; i < argsarray.length; i++){argsmatrix[i] = new Array(2);argsmatrix[i] = argsarray[i].split('=');} //split the array members and put into the matrix
+        for (var j = 0; j < argsmatrix.length; j++){
+          if (argsmatrix[j][0] == 'e'){
+            document.getElementById('email').innerHTML = argsmatrix[j][1];
+            document.getElementById('email').href='mailto:' + argsmatrix[j][1];
+          }
+          if (argsmatrix[j][0] == 'c'){document.getElementById('cell').innerHTML = argsmatrix[j][1];}
+        }
+      }
+    </script>
+  </head>
+  <body class="w3-light-grey" onload="initialize();">
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="images/profile.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black w3-gray" style="border-radius:0 16px 0 0;"><h2>Stuart Weenig</h2></div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Network Management Automation Architect</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Houston, TX</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a id="email" href=""></a></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><span id="cell"></span></p>
+            <p><a href="http://stuart.weenig.com"><i class="fa fa-link fa-fw w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i>stuart.weenig.com</a></p>
+            <p><a href="http://twitter.com/sweenig"><i class="fa fa-fw fa-twitter w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i><i class="fa fa-at"></i>sweenig</a></p>
+            <p><a href="http://www.linkedin.com/in/sweenig"><i class="fa fa-fw fa-linkedin w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i>linkedin.com/in/sweenig</a></p>
+            <p><a href="sweenig.resume.current.pdf"><i class="fa fa-fw fa-download w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i>Download PDF</a></p>
+            <hr>
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <ul class="w3-ul">
+              <li class="li-bar"><i class="fa fa-cogs w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Automation (Ansible)</span></li>
+              <li class="li-bar"><i class="fa fa-code w3-bar-item"></i><span class="w3-margin-left w3-bar-item">YAML, Jinja2, Python, Perl, HTML5, JavaScript, CSS3</span></li>
+              <li class="li-bar"><i class="fa fa-area-chart w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Network Monitoring</span></li>
+              <li class="li-bar"><i class="fa fa-laptop w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Software Defined Networking</span></li>
+              <li class="li-bar"><i class="fa fa-code-fork w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Software Development</span></li>
+              <li class="li-bar"><i class="fa fa-cloud w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Cloud Computing</span></li>
+              <li class="li-bar"><i class="fa fa-building-o w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Enterprise</span></li>
+              <li class="li-bar"><i class="fa fa-windows w3-bar-item"></i><span class="w3-margin-left w3-bar-item">SharePoint/Office 365</span></li>
+            </ul>
+            <br>
+            <p class="w3-large w3-text-theme">
+              <b>
+                <i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages
+              </b>
+            </p>
+            <ul class="w3-ul">
+              <li class="li-bar">
+                <i class="fa fa-comments-o w3-bar-item"></i><span class="w3-margin-left w3-bar-item">English</span>
+              </li>
+              <li class="li-bar">
+                <i class="fa fa-comments-o w3-bar-item"></i><span class="w3-margin-left w3-bar-item">Spanish (fluent)</span>
+              </li>
+            </ul>
+            <br>
+          </div>
+        </div><br>
+      </div>
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Network Management Automation Architect / Chevron</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2014 - Sep 2018</h6>
+          <p>Chief Architect for network automation including development, testing, and mass deployment to production of OS upgrades, Security Controls Compliance, and best practices configuration.</p>
+          <p>Designed business decision data repository using software developement lifecycle methodologies for automated/zero touch provisioning of production infrastructure through Ansible Tower.</p>
+          <p>Principal developer for Ansible Playbook for upgrading Cisco IOS devices en masse, certified for use against the ten most common models of Cisco devices.</p>
+          <p>Enterprise Tools Portfolio Management responsibilities including deduplication, renovation, modernization, and rationalization of tools currently in use globally.</p>
+          <p>Identified and prepared for long term growth of network operations monitoring pipeline to include server, cloud, storage, database, and application monitoring.</p>
+          <p>As SharePoint Team Site administrator, identified growth opportunities and filled gaps using out of the box technologies, maximizing utilization and convenience.</p>
+          <p>Proactively identify network infrastructure issues by providing regular, clear, reliable communication to stake holders about service impacting issues.</p>
+          <p>Organized and carried out PiWars coding principles education initiative, utilizing low budget robotics and physical computing devices to foster increased organizational capabilities in the areas of software development and infrastructure as code.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Communications Officer / CA|NetQoS Global User Community</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2010 - Jan 2015</h6>
+          <p>Ensured that the community was aligned with the other communities. Maintained the communities' calendar in coordination with regional and global events. Reviewed and edited content prior to site publication. Reviewed and 
 monitored site for effective communications. Managed and contributed to social media activities in conjunction with CA and the other communities. Implemented the online communication action plans for the community, using social media, multimedia, and other tools 
 where relevant.</p>
-					<hr>
-				</div>
-				<div class="w3-container">
-					<h5 class="w3-opacity"><b>NetQoS Architect | Team Lead / Aspire Technical Professionals</b></h5>
-					<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2012 - Mar 2014</h6>
-					<p>Lead a team of senior, expert, and entry level consultants performing professional services for CA|NetQoS customers. Train all members of the team personally in all aspects of NetQoS best practices and consulting 
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>NetQoS Architect | Team Lead / Aspire Technical Professionals</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2012 - Mar 2014</h6>
+          <p>Lead a team of senior, expert, and entry level consultants performing professional services for CA|NetQoS customers. Train all members of the team personally in all aspects of NetQoS best practices and consulting 
 techniques. Manage daily operations for all team members.</p>
-					<p>Consulted NetQoS customers on the installation, configuration, and optimization of network monitoring tools. Inform customers of strategic direction and needed emphasis with regard to network, server, and application 
+          <p>Consulted NetQoS customers on the installation, configuration, and optimization of network monitoring tools. Inform customers of strategic direction and needed emphasis with regard to network, server, and application 
 infrastructure to optimize performance and reliability. Install and configure the NetQoS suite of products at CA customer sites. Conduct training and knowledge transfer sessions with customers.</p>
-					<br>
-				</div>
-				<div class="w3-container">
-					<h5 class="w3-opacity"><b>System Engineering Specialist / Research in Motion (Blackberry Inc.)</b></h5>
-					<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2010 - Jul 2011</h6>
-					<p>Responsible for the adoption and optimization of the CA|NetQoS suite within the corporate and BlackBerry infrastructures.</p>
-					<p>Serve as subject matter expert in regards to performance and availability monitoring through the implementation of SuperAgent, ReporterAnalyzer, NetVoyant, Unified Communications Monitor and the NetQoS Performance 
+          <br>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>System Engineering Specialist / Research in Motion (Blackberry Inc.)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2010 - Jul 2011</h6>
+          <p>Responsible for the adoption and optimization of the CA|NetQoS suite within the corporate and BlackBerry infrastructures.</p>
+          <p>Serve as subject matter expert in regards to performance and availability monitoring through the implementation of SuperAgent, ReporterAnalyzer, NetVoyant, Unified Communications Monitor and the NetQoS Performance 
 Center.</p>
-					<p>Facilitate best practices for the strategic deployment of monitoring services.</p>
-					<p>Assist in the interactions with CA on a business relations level.</p>
-					<p>Build and execute test plans for evaluations and capacity testing of the NetQoS|CA products with RIM environments.</p>
-					<p>Create custom polling solutions within the NetVoyant SNMP polling product.</p>
-					<br>
-				</div>
-			</div>
-			<div class="w3-container w3-card w3-white">
-				<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-				<div class="w3-container">
-					<h5 class="w3-opacity"><b>Louisiana Tech University</b></h5>
-					<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2003 - 2006</h6>
-					<p>Bachelor of Science Degree in Electrical Engineering</p>
-					<p>Minor in Spanish</p>
-					<hr>
-				</div>
-			</div><!-- End Right Column -->
-		</div><!-- End Grid -->
-	</div><!-- End Page Container --> <footer class="w3-container w3-teal w3-center w3-margin-top">
-	<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> </footer> </body> </html>
+          <p>Facilitate best practices for the strategic deployment of monitoring services.</p>
+          <p>Assist in the interactions with CA on a business relations level.</p>
+          <p>Build and execute test plans for evaluations and capacity testing of the NetQoS|CA products with RIM environments.</p>
+          <p>Create custom polling solutions within the NetVoyant SNMP polling product.</p>
+          <br>
+        </div>
+      </div>
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Louisiana Tech University</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2003 - 2006</h6>
+          <p>Bachelor of Science Degree in Electrical Engineering</p>
+          <p>Minor in Spanish</p>
+          <hr>
+        </div>
+      </div><!-- End Right Column -->
+    </div><!-- End Grid -->
+  </div><!-- End Page Container --> <footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> </footer> </body> </html>
