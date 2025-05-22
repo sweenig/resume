@@ -6,40 +6,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <style>
-      html,body,h1,h2,h3,h4,h5,h6 {
-        font-family: "Roboto", sans-serif
-      }
-      #maincontainer{
-        max-width:1400px;
-      }
-      img.avatar{
-        width:100%
-      }
-      div.avatarlabel{
-        border-radius:0 16px 0 0;
-      }
-    </style>
-    <script>
-      function initialize(){
-        var e = 0;
-        var c = 0;
-        var parenturl=parent.document.location.search; //get the parent page URL parameters
-        parenturl=parenturl.replace('?',''); //remove the leading ? from the URL parameters
-        var argsarray=parenturl.split('&'); //split the parameters into an array of parameter pairs
-        var argsmatrix = new Array(argsarray.length); //create the matrix to hold the parameters after splitting
-        for (var i = 0; i < argsarray.length; i++){argsmatrix[i] = new Array(2);argsmatrix[i] = argsarray[i].split('=');} //split the array members and put into the matrix
-        for (var j = 0; j < argsmatrix.length; j++){
-          if (argsmatrix[j][0] == 'e'){
-            document.getElementById('email').innerHTML = argsmatrix[j][1];
-            document.getElementById('email').href='mailto:' + argsmatrix[j][1];
-          }
-          if (argsmatrix[j][0] == 'c'){document.getElementById('cell').innerHTML = argsmatrix[j][1];}
-        }
-      }
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
   </head>
   <body class="w3-light-grey" onload="initialize();">
+  <button onclick="toggleDarkMode()" style="position:fixed;top:10px;right:10px;z-index:9999;" class="w3-button w3-teal w3-round"><i class="material-icons" style="padding-top:4px;">dark_mode</i></button>
   <div id="maincontainer" class="w3-content w3-margin-top">
     <div class="w3-row-padding">
       <div class="w3-third">
