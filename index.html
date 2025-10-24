@@ -10,13 +10,16 @@
     <script src="functions.js"></script>
   </head>
   <body class="w3-light-grey" onload="initialize();">
-  <button onclick="toggleDarkMode()" style="position:fixed;top:10px;right:10px;z-index:9999;" class="w3-button w3-teal w3-round"><i class="material-icons" style="padding-top:4px;">dark_mode</i></button>
+  <button onclick="toggleDarkMode()" style="position:fixed;top:10px;right:10px;z-index:9999;" class="w3-button w3-teal w3-round" aria-label="Toggle dark mode">
+    <i class="material-icons" style="padding-top:4px;" aria-hidden="true">dark_mode</i>
+    <span class="sr-only">Toggle dark mode</span>
+  </button>
   <div id="maincontainer" class="w3-content w3-margin-top">
     <div class="w3-row-padding">
       <div class="w3-third">
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
-            <img class="avatar" src="images/profile.jpg" alt="Avatar">
+            <img class="avatar" src="images/profile.jpg" alt="Portrait of Stuart Weenig">
             <div class="w3-display-bottomleft w3-container w3-text-black w3-gray avatarlabel"><h2>Stuart Weenig</h2></div>
           </div>
           <div class="w3-container">
@@ -25,14 +28,41 @@
             <p>Champion continuous improvement, mentoring engineers and leveling up organizations through pragmatic tooling modernization and knowledge sharing.</p>
           </div>
           <div class="w3-container">
-            <p><i class="material-icons w3-margin-right w3-large w3-text-teal">&#xeb3f;</i>Network Management Automation Architect</p>
-            <p><i class="material-icons w3-margin-right w3-large w3-text-teal">&#xe88a;</i>Dallas, TX</p>
-            <p><i class="material-icons w3-margin-right w3-large w3-text-teal">&#xe0be;</i><a title="e-mail" id="email" href=""></a></p>
-            <p><i class="material-icons w3-margin-right w3-large w3-text-teal">&#xe0cf;</i><span id="cell"></span></p>
-            <p><a href="http://stuart.weenig.com"><i class="material-icons w3-margin-right w3-large w3-text-teal w3-hover-opacity">&#xe88e;</i>stuart.weenig.com</a></p>
+            <p>
+              <i class="material-icons w3-margin-right w3-large w3-text-teal" aria-hidden="true">&#xeb3f;</i>
+              <span class="sr-only">Professional title:</span>Network Management Automation Architect
+            </p>
+            <p>
+              <i class="material-icons w3-margin-right w3-large w3-text-teal" aria-hidden="true">&#xe88a;</i>
+              <span class="sr-only">Location:</span>Dallas, TX
+            </p>
+            <p>
+              <i class="material-icons w3-margin-right w3-large w3-text-teal" aria-hidden="true">&#xe0be;</i>
+              <span class="sr-only">Email:</span><a title="e-mail" id="email" href=""></a>
+            </p>
+            <p>
+              <i class="material-icons w3-margin-right w3-large w3-text-teal" aria-hidden="true">&#xe0cf;</i>
+              <span class="sr-only">Phone:</span><span id="cell"></span>
+            </p>
+            <p>
+              <a href="http://stuart.weenig.com" target="_blank" rel="noopener">
+                <i class="material-icons w3-margin-right w3-large w3-text-teal w3-hover-opacity" aria-hidden="true">&#xe88e;</i>
+                <span class="sr-only">Portfolio website:</span>stuart.weenig.com
+              </a>
+            </p>
             <!-- <p><a href="http://twitter.com/sweenig"><i class="fab fa-twitter w3-margin-right w3-large w3-text-teal w3-hover-opacity"></i><i class="fas fa-at"></i>sweenig</a></p> -->
-            <p><a href="http://www.linkedin.com/in/sweenig"><i class="material-icons w3-margin-right w3-large w3-text-teal w3-hover-opacity">&#xe86d;</i>linkedin.com/in/sweenig</a></p>
-            <p><a href="sweenig.resume.current.pdf"><i class="material-icons w3-margin-right w3-large w3-text-teal w3-hover-opacity">&#xe2c4;</i>Download PDF</a></p>
+            <p>
+              <a href="http://www.linkedin.com/in/sweenig" target="_blank" rel="noopener">
+                <i class="material-icons w3-margin-right w3-large w3-text-teal w3-hover-opacity" aria-hidden="true">&#xe86d;</i>
+                <span class="sr-only">LinkedIn profile:</span>linkedin.com/in/sweenig
+              </a>
+            </p>
+            <p>
+              <a href="sweenig.resume.current.pdf" target="_blank" rel="noopener">
+                <i class="material-icons w3-margin-right w3-large w3-text-teal w3-hover-opacity" aria-hidden="true">&#xe2c4;</i>
+                <span class="sr-only">Download a PDF copy:</span>Download PDF
+              </a>
+            </p>
             <hr>
             <p class="w3-large w3-text-theme"><b><i class="fas fa-scroll w3-margin-right w3-text-teal"></i>Certifications</b></p>
             <ul class="w3-ul">
