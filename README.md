@@ -9,8 +9,11 @@
 * [LinkedIn Profile](http://www.linkedin.com/in/sweenig)
 * [Download PDF](sweenig.resume.current.pdf)
 
+> Highly accomplished technical leader with 15+ years of experience designing and deploying enterprise-scale monitoring, observability, and network automation platforms for global networks. Proven ability to translate complex operational requirements into scalable Infrastructure as Code (IaC) and transition teams to customized Agile Scrum methodologies, resulting in a 300% increase in team deliverable output and $10M/year in cost reductions. Champion continuous improvement by mentoring engineers, leading cross-functional teams, and architecting resilient tooling across hybrid environments.
+
 ## Certifications
 
+* [Accredible Credentials/Badges](https://www.credential.net/profile/sweenig/wallet)
 * [LogicMonitor Certified Associate](LMCA2024.pdf)
 * [LogicMonitor Certified Professional](lmcp2024.pdf)
 * [LogicMonitor Certified Developer](lmcd2022.pdf)
@@ -132,8 +135,6 @@
 
 ### Communications Officer / CA|NetQoS Global User Community
 
-#### Dec 2010 - Jan 2015
-
 * Ensured that the community was aligned with the other communities.
 * Maintained the communities' calendar in coordination with regional and global events.
 * Reviewed and edited content prior to site publication.
@@ -143,14 +144,10 @@
 
 ### NetQoS Architect | Team Lead / Aspire Technical Professionals
 
-#### Jan 2012 - Mar 2014
-
 * Lead a team of senior, expert, and entry level consultants performing professional services for CA|NetQoS customers. Train all members of the team personally in all aspects of NetQoS best practices and consulting techniques. Manage daily operations for all team members.
 * Consulted NetQoS customers on the installation, configuration, and optimization of network monitoring tools. Inform customers of strategic direction and needed emphasis with regard to network, server, and application infrastructure to optimize performance and reliability. Install and configure the NetQoS suite of products at CA customer sites. Conduct training and knowledge transfer sessions with customers.
 
 ### System Engineering Specialist / Research in Motion (Blackberry Inc.)
-
-#### Oct 2010 - Jul 2011
 
 * Responsible for the adoption and optimization of the CA|NetQoS suite within the corporate and BlackBerry infrastructures.
 * Serve as subject matter expert in regards to performance and availability monitoring through the implementation of SuperAgent, ReporterAnalyzer, NetVoyant, Unified Communications Monitor and the NetQoS Performance Center.
@@ -162,8 +159,6 @@
 ## Education
 
 ### Louisiana Tech University
-
-#### 2003 - 2006
 
 * Bachelor of Science Degree in Electrical Engineering
 * Minor in Spanish
