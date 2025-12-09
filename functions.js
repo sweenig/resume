@@ -1,25 +1,38 @@
 function initialize(){
-  var e = 0;
-  var c = 0;
-  var parenturl=parent.document.location.search; //get the parent page URL parameters
-  parenturl=parenturl.replace('?',''); //remove the leading ? from the URL parameters
-  var argsarray=parenturl.split('&'); //split the parameters into an array of parameter pairs
-  var argsmatrix = new Array(argsarray.length); //create the matrix to hold the parameters after splitting
-  for (var i = 0; i < argsarray.length; i++){ //split the array members and put into the matrix
-    argsmatrix[i] = new Array(2);
-    argsmatrix[i] = argsarray[i].split('=');
+  if (!window.URLSearchParams) {
+    return;
   }
-  for (var j = 0; j < argsmatrix.length; j++){
-    if (argsmatrix[j][0] == 'e'){ // if the email parameter is present
-      document.getElementById('email').innerHTML = argsmatrix[j][1];
-      document.getElementById('email').href='mailto:' + argsmatrix[j][1];
+
+  var search = window.location.search;
+  try {
+    if (parent && parent !== window && parent.document && parent.document.location) {
+      search = parent.document.location.search;
     }
-    if (argsmatrix[j][0] == 'c'){ // if the cell phone number parameter is present
-        document.getElementById('cell').innerHTML = argsmatrix[j][1];
+  } catch (err) {
+    search = window.location.search;
+  }
+
+  var params = new URLSearchParams(search);
+  var emailElement = document.getElementById('email');
+  var cellElement = document.getElementById('cell');
+
+  if (emailElement && params.has('e')) {
+    var email = params.get('e').trim();
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailElement.textContent = email;
+      emailElement.setAttribute('href', 'mailto:' + encodeURIComponent(email));
     }
-    if (argsmatrix[j][0] == "d"){ // if the dark mode parameter is present
-      document.body.classList.toggle('dark-mode');
+  }
+
+  if (cellElement && params.has('c')) {
+    var phone = params.get('c').trim();
+    if (/^[0-9()+.\-\s]+$/.test(phone)) {
+      cellElement.textContent = phone;
     }
+  }
+
+  if (params.has('d')){ // if the dark mode parameter is present
+    document.body.classList.toggle('dark-mode');
   }
 }
 function toggleDarkMode() {
